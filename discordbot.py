@@ -35,4 +35,4 @@ async def on_message(message):
     if message.content.startswith('.loli'):
         randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
         await client.send_message(message.channel,(random.choice(randomlist)))
-client.run(os.getenv('NTIyNzI4MDA1OTk1NDYyNjkx.DvU7RA.tqijlDoWV0bE5Qo0qhnjL2TCPJU'))
+client.run(os.getenv('TOKEN'))
