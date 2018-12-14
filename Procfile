@@ -1,1 +1,1 @@
-worker: python PimpPanda.py
+worker: python tutorialbot.py
