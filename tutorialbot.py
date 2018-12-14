@@ -37,7 +37,7 @@ async def on_message(message):
 
 @client.command(pass_context=True)
 async def clear(ctx, amount):
-	channel = ctx,message,channel
+	channel = ctx.message.channel
 	messages = []
 	async for message in client.logs_from(channel, limit=int(amount)):
 		messages.append(message)
