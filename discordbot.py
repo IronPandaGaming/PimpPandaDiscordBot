@@ -8,21 +8,18 @@ import random
 from discord import Game
 
 Client = discord.client
-client = commands.Bot(command_prefix = '!')
+client = commands.Bot(command_prefix = '.')
 Clientdiscord = discord.Client()
 
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Hunting Lolis...'))
-    print('Ready, Freddy')
+    await client.change_presence(game=Game(name="Hunting Lolis..."))
 
 @client.event
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name="Pandamoniums")
     await client.add_roles(member, role)
-
-
 
 @client.event
 async def on_message(message):
@@ -35,4 +32,5 @@ async def on_message(message):
     if message.content.startswith('.loli'):
         randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
         await client.send_message(message.channel,(random.choice(randomlist)))
+        
 client.run(os.getenv('TOKEN'))
