@@ -39,7 +39,7 @@ async def on_message(message):
 async def clear(ctx, amount=1):
 	channel = ctx,message,channel
 	messages = []
-	async for message in client.logs_from(channel, limit=int(amount) + 1):
+	async for message in client.logs_from(channel, limit=int(amount)):
 		messages.append(message)
 	await client.delete_messages(messages)
 	await client.say("Messages Deleted.")
