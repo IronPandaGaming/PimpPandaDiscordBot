@@ -36,7 +36,7 @@ async def on_message(message):
         await client.send_message(message.channel,(random.choice(randomlist)))
 
 @client.command(pass_context=True)
-async def clear(ctx, amount=1):
+async def clear(ctx, amount):
 	channel = ctx,message,channel
 	messages = []
 	async for message in client.logs_from(channel, limit=int(amount)):
