@@ -41,7 +41,7 @@ async def clear(ctx, amount=1):
 	messages = []
 	async for message in client.logs_from(channel, limit=int(amount)):
 		messages.append(message)
-		await client.delete_messages(messages)
-		await client.say('Messages deleted.')
+	await client.delete_messages(messages)
+	await client.say('Messages Deleted.')
         
 client.run(os.getenv('TOKEN'))
