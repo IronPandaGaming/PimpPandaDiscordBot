@@ -11,7 +11,6 @@ Client = discord.client
 client = commands.Bot(command_prefix = '.')
 Clientdiscord = discord.Client()
 
-
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name="Hunting Lolis..."))
@@ -35,7 +34,7 @@ async def on_message(message):
         randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
         await client.send_message(message.channel,(random.choice(randomlist)))
         
-@client.event
+@client.command(pass_context=True)
 async def clear(ctx, amount=1):
     channel = ctx.message.channel
     messages = []
@@ -43,5 +42,5 @@ async def clear(ctx, amount=1):
         messages.append(message)
     await client.delete_messages(messages)
     await client.say('Messages Deleted.')
-        
+
 client.run(os.getenv('TOKEN'))
