@@ -36,12 +36,12 @@ async def on_message(message):
         await client.send_message(message.channel,(random.choice(randomlist)))
 
 @client.command(pass_context=True)
-async def clear(ctx, amount):
-	channel = ctx.message.channel
+async def clear(ctx, amount=1):
+	channel= ctx.message.channel
 	messages = []
 	async for message in client.logs_from(channel, limit=int(amount)):
 		messages.append(message)
-	await client.delete_messages(messages)
-	await client.say("Messages Deleted.")
+		await client.delete_messages(messages)
+		await client.say('Messages deleted.')
         
 client.run(os.getenv('TOKEN'))
