@@ -13,7 +13,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name="Hunting Lolis..."))
+    await client.change_presence(game=Game(name="Loli Hunter..."))
 
 @client.event
 async def on_member_join(member):
@@ -30,9 +30,13 @@ async def on_message(message):
        await client.delete_message(message)
     if ('niggers') in message.content:
        await client.delete_message(message)
+    if ('Niggers') in message.content:
+       await client.delete_message(message)
+    if ('Nigger') in message.content:
+       await client.delete_message(message)
     if message.content.startswith('.loli'):
-        randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
-        await client.send_message(message.channel,(random.choice(randomlist)))
+       randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
+       await client.send_message(message.channel,(random.choice(randomlist)))
         
 @client.command (pass_context=True)
 async def clear(ctx, amount=1):
