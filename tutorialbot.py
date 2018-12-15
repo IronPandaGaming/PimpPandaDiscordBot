@@ -61,4 +61,4 @@ async def clear(ctx, amount=1):
     await client.delete_messages(messages)
     await client.say('Messages Deleted.')
     
-client.run(os.getenv('TOKEN'))
+client.run("TOKEN")
