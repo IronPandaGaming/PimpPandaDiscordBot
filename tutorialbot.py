@@ -16,7 +16,7 @@ async def on_ready():
     print ('Bot is ready.')
 
 @client.command(pass_context=True)
-async def clear(ctx, amount=2):
+async def clear(ctx, amount = 5):
     channel = ctx.message.channel
     messages = []
     async for message in client.logs_from(channel, limit=int(amount)):
