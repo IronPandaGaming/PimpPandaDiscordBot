@@ -15,6 +15,15 @@ async def on_ready():
     await client.change_presence(game=Game(name='Powering...UP!'))
     print ('Bot is ready.')
 
+@client.command(pass_context=True)
+async def clear(ctx, amount=2):
+    channel = ctx.message.channel
+    messages = []
+    async for message in client.logs_from(channel, limit=int(amount)):
+        messages.append(message)
+    await client.delete_messages(messages)
+    await client.say('Messages Deleted.')
+
 @client.event
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name="Pandamoniums")
@@ -50,14 +59,5 @@ async def on_message(message):
        
     if message.content == '.irma':
        await client.send_message(message.channel,"Panda's favorite Loli?")
-
-@client.command (pass_context=True)
-async def clear (ctx, amount=1):
-    channel = ctx.message.channel
-    messages = []
-    async for message in client.logs_from(channel, limit=int(amount)+1):
-        messages.append(message)
-    await client.delete_messages(messages)
-    await client.say('Messages Deleted.')
 
 client.run(TOKEN)
