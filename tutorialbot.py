@@ -51,7 +51,7 @@ async def on_message(message):
        randomlist = ["Panda has a loli named Irma","Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
        await client.send_message(message.channel,(random.choice(randomlist)))
         
-    if message.content == '.irma'"
+    if message.content == '.irma':
         await client.send_message(message.channel,"Oh...Panda's favorite loli?") 
         
 @client.command (pass_context=True)
