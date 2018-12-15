@@ -30,11 +30,11 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
         
     if message.content.lower == 'nigger':
-        reply = "Hey! You're not allowed to use that word here!"
+        replies = "Hey! You're not allowed to use that word here!"
         await client.delete_message(message)
         await client.send_message(message.channel, reply)
     if message.content.lower == 'niggers':
-        reply = "Hey! You're not allowed to use that word here!"
+        replies = "Hey! You're not allowed to use that word here!"
         await client.delete_message(message)
         await client.send_message(message.channel, reply)
         
