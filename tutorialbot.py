@@ -38,13 +38,10 @@ async def on_message(message):
        randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
        await client.send_message(message.channel,(random.choice(randomlist)))
         
-@client.command (pass_context=True)
-async def clear(ctx, amount=1):
+@client.command(pass_context=True)
+async def purge(ctx):
     channel = ctx.message.channel
-    messages = []
-    async for message in client.logs_from(channel, limit=int(amount)):
-        messages.append(message)
-    await client.delete_messages(messages)
-    await client.say('Messages Deleted.')
+    deleted = await bot.purge_from(channel, limit=100)
+    await bot.send_message(channel, 'Deleted {} Message(s)'.format(len(deleted)))
 
 client.run(os.getenv('TOKEN'))
