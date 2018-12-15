@@ -28,6 +28,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
     if ('nigger') in message.content:
        await client.delete_message(message)
+        await client.send_message(message.channel, "**Hey!** You're not allowed to use that word here!")
     if ('niggers') in message.content:
        await client.delete_message(message)
     if ('Niggers') in message.content:
