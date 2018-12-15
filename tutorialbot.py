@@ -29,12 +29,14 @@ async def on_message(message):
         em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523335385833799733/nanithefuck.JPG')
         await client.send_message(message.channel, embed=em)
         
-    if ('nigger') in message.content.lower:
-       await client.delete_message(message)
-       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
-    if ('niggers') in message.content.lower:
-       await client.delete_message(message)
-       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
+    if message.content.lower == 'nigger':
+        reply = "Hey! You're not allowed to use that word here!"
+        await client.delete_message(message)
+        await client.send_message(message.channel, reply)
+    if message.content.lower == 'niggers':
+        reply = "Hey! You're not allowed to use that word here!"
+        await client.delete_message(message)
+        await client.send_message(message.channel, reply)
         
     if message.content.startswith('.loli'):
        randomlist = ["Panda has a loli named Irma","Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
