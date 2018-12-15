@@ -24,7 +24,6 @@ async def on_message(message):
         em = discord.Embed(description='')
         em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523120846097612810/sadpanda.jpg')
         await client.send_message(message.channel, embed=em)
-async def on_message(message):
     if message.content == '.nani':
         em = discord.Embed(description='')
         em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523335385833799733/nanithefuck.JPG')
