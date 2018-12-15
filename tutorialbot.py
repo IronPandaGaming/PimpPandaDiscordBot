@@ -16,6 +16,11 @@ async def on_ready():
     print ('Bot is ready.')
 
 @client.event
+async def on_member_join(member):
+    role = discord.utils.get(member.server.roles, name="Pandamoniums")
+    await client.add_roles(member, role)
+
+@client.event
 async def on_message(message):
     if message.content == '.sadpanda':
         em = discord.Embed(description='')
