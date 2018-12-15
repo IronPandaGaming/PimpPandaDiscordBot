@@ -26,10 +26,12 @@ async def on_message(message):
         em = discord.Embed(description='')
         em.set_image(url='https://media.discordapp.net/attachments/523120827697463298/523120846097612810/sadpanda.jpg')
         await client.send_message(message.channel, embed=em)
-        
+ 
+@client.event
+async def on_message(message):
     if message.content == '.nani':
         em = discord.Embed(description='')
-        em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523335385833799733/nanithefuck.jpg')
+        em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523335385833799733/nanithefuck.JPG')
         await client.send_message(message.channel, embed=em)
         
     if ('nigger') in message.content:
