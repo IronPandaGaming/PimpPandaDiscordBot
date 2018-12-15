@@ -38,8 +38,17 @@ async def on_message(message):
     if message.content.startswith('.loli'):
        randomlist = ["Panda has a loli named Irma","Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
        await client.send_message(message.channel,(random.choice(randomlist)))
-        
+       
     if message.content == '.irma':
        await client.send_message(message.channel,"Panda's favorite Loli?")
+
+@client.command (pass_context=True)
+async def clear (ctx, amount=1):
+    channel = ctx.message.channel
+    messages = []
+    async for message in client.logs_from(channel, limit=int(amount)+1):
+        messages.append(message)
+    await client.delete_messages(messages)
+    await client.say('Messages Deleted.')
 
 client.run(TOKEN)
