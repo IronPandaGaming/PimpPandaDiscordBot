@@ -24,24 +24,16 @@ async def on_message(message):
         em = discord.Embed(description='')
         em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523120846097612810/sadpanda.jpg')
         await client.send_message(message.channel, embed=em)
- 
-@client.event
 async def on_message(message):
     if message.content == '.nani':
         em = discord.Embed(description='')
         em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523335385833799733/nanithefuck.JPG')
         await client.send_message(message.channel, embed=em)
         
-    if ('nigger') in message.content:
+    if ('nigger') in message.content.lower:
        await client.delete_message(message)
        await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
-    if ('niggers') in message.content:
-       await client.delete_message(message)
-       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
-    if ('Niggers') in message.content:
-       await client.delete_message(message)
-       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
-    if ('Nigger') in message.content:
+    if ('niggers') in message.content.lower:
        await client.delete_message(message)
        await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
         
