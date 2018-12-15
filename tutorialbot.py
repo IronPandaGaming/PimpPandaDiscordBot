@@ -6,8 +6,6 @@ import time
 import random
 from discord import Game
 
-TOKEN = 'NTIyNzI4MDA1OTk1NDYyNjkx.DvZ2GQ.z1lzc_M24CCDmAllBaf50zC0g8I'
-
 client = commands.Bot(command_prefix = '.')
 
 @client.event
