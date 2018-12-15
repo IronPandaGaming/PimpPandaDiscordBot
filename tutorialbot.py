@@ -7,8 +7,6 @@ import time
 import random
 from discord import Game
 
-TOKEN = 'NTIyNzI4MDA1OTk1NDYyNjkx.DvYD7Q.1-MG7WimvqkOoy0x7t2hAiTekz0'
-
 Client = discord.client
 client = commands.Bot(command_prefix = '.')
 Clientdiscord = discord.Client()
@@ -64,5 +62,5 @@ async def clear(ctx, amount=1):
         messages.append(message)
     await client.delete_messages(messages)
     await client.say('Messages Deleted.')
-
+    
 client.run(os.getenv('TOKEN'))
