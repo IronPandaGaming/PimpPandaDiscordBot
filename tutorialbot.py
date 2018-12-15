@@ -52,7 +52,7 @@ async def on_message(message):
        await client.send_message(message.channel,(random.choice(randomlist)))
         
     if message.content == '.irma':
-        await client.send_message(message.channel,"Oh...Panda's favorite loli?") 
+        await client.send_message(message.channel,"Oh... Panda's favorite loli?") 
         
 @client.command (pass_context=True)
 async def clear(ctx, amount=1):
