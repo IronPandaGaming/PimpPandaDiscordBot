@@ -31,10 +31,13 @@ async def on_message(message):
        await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
     if ('niggers') in message.content:
        await client.delete_message(message)
+       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
     if ('Niggers') in message.content:
        await client.delete_message(message)
+       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
     if ('Nigger') in message.content:
        await client.delete_message(message)
+       await client.send_message(message.channel, "Hey! You're not allowed to use that word here!")
     if message.content.startswith('.loli'):
        randomlist = ["Panda has a loli named Jenny","Panda has a loli named Rebecca","Panda has a loli named Emma","Panda has a loli named Sophia","Panda has a loli named Olivia"]
        await client.send_message(message.channel,(random.choice(randomlist)))
