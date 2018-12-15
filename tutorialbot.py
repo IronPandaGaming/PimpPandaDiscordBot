@@ -59,4 +59,4 @@ async def on_message(message):
     if message.content == '.irma':
        await client.send_message(message.channel,"Panda's favorite Loli?")
 
-client.run(TOKEN)
+client.run(os.getenv('TOKEN'))
