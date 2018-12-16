@@ -38,6 +38,10 @@ async def on_message(message):
         em = discord.Embed(description='')
         em.set_image(url='https://cdn.discordapp.com/attachments/523120827697463298/523335385833799733/nanithefuck.JPG')
         await client.send_message(message.channel, embed=em)
+    if message.content == '.reverse':
+        em = discord.Embed(description='')
+        em.set_image(url='https://cdn.discordapp.com/attachments/189078483865960448/523672198754467841/3WDcYbV.png')
+        await client.send_message(message.channel, embed=em)
         
     if ('nigger') in message.content:
        await client.delete_message(message)
