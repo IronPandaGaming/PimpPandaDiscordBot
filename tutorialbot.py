@@ -62,5 +62,7 @@ async def on_message(message):
        
     if message.content == '.irma':
        await client.send_message(message.channel,"Panda's favorite Loli?")
+    if message.content == '.vanessa':
+       await client.send_message(message.channel,"@ⒷⓁⓄⓄⒹⓎ💜ⓋⒶⓃⒺⓈⓈⒶ")
 
 client.run(os.getenv('TOKEN'))
