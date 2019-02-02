@@ -32,7 +32,7 @@ async def on_member_join(member):
 async def on_message(message):
     if message.content == '.sadpanda':
         em = discord.Embed(description='')
-        em.set_image(url='https://media.discordapp.net/attachments/523120827697463298/523120846097612810/sadpanda.jpg')
+        em.set_image(url='http://i.imgur.com/uSDmoXX.jpg')
         await client.send_message(message.channel, embed=em)
     if message.content == '.nani':
         em = discord.Embed(description='')
@@ -62,6 +62,8 @@ async def on_message(message):
        
     if message.content == '.irma':
        await client.send_message(message.channel,"Panda's favorite Loli?")
+    if message.content == '.splitgate':
+       await client.send_message(message.channel,"https://discord.gg/splitgate")
     if message.content == '.vanessa':
        await client.send_message(message.channel,"@ⒷⓁⓄⓄⒹⓎ💜ⓋⒶⓃⒺⓈⓈⒶ")
 
