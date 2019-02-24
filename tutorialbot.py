@@ -66,5 +66,7 @@ async def on_message(message):
        await client.send_message(message.channel,"https://discord.gg/splitgate")
     if message.content == '.vanessa':
        await client.send_message(message.channel,"The biggest, smelliest doodoo on Earth?! Oh yeah she's a pile of poo...")
+     if message.content == '.scary':
+       await client.send_message(message.channel,"The gayest nut licker in the universe?! Don't worry you don't have anything to worry about since he only cares for his males")
 
 client.run(os.getenv('TOKEN'))
