@@ -72,5 +72,7 @@ async def on_message(message):
        await client.send_message(message.channel,"The biggest, smelliest doodoo on Earth?! Oh yeah she's a pile of poo...")
     if message.content == '.scary':
        await client.send_message(message.channel,"The gayest nut licker in the universe?! Don't worry you don't have anything to worry about since he only cares for his males")
-
+    if message.content == '.amy':
+       await client.send_message(message.channel,"Unicornfreakingdoggo?! Careful there... she'll steal all your food even though she claims to be your best fr---d. Also beware of your booties - she'll swindle it muahahaha!")
+    
 client.run(os.getenv('TOKEN'))
