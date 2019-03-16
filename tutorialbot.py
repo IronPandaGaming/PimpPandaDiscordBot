@@ -44,7 +44,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
     if message.content == '.eileen':
         em = discord.Embed(description='')
-        em.set_image(url='https://media.discordapp.net/attachments/189078483865960448/549210822719832065/1551012418012.png')
+        em.set_image(url='https://cdn.discordapp.com/attachments/352330542794145795/556241354922131486/1551012418012.png')
         await client.send_message(message.channel, embed=em)
         
     if ('nigger') in message.content:
